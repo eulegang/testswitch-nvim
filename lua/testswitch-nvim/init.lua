@@ -13,7 +13,6 @@ function M.is_test(path, parent)
 end
 
 function M.test_paths(path, parent)
-  print(vim.inspect(path))
   local res = {}
   if parent ~= nil then
     res = parent(path)
@@ -27,12 +26,10 @@ function M.test_paths(path, parent)
     })
   end
 
-  print(vim.inspect(res))
   return res
 end
 
 function M.origin_paths(path, parent)
-  print(vim.inspect(path))
   local res = {}
   if parent ~= nil then
     res = parent(path)
@@ -46,7 +43,6 @@ function M.origin_paths(path, parent)
     })
   end
 
-  print(vim.inspect(res))
   return res
 end
 
